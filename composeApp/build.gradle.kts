@@ -36,11 +36,11 @@ kotlin {
 
 compose.desktop {
     application {
-        mainClass = "com.parengus.epoch_path_builder.MainKt"
+        mainClass = "com.parengus.pob_diff.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.parengus.epoch_path_builder"
+            packageName = "com.parengus.pob_diff"
             packageVersion = "1.0.0"
         }
     }

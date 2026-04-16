@@ -1,6 +1,6 @@
-# Epoch Path Builder
+# PoBDiff
 
-A build planner for [Last Epoch](https://www.lastepoch.com/), inspired by Path of Building. Plan your passive tree, skill specializations, and gear — then follow a guide without losing track of where your character actually is.
+A Path of Exile build planner inspired by Path of Building, with a key addition: import a PoB guide alongside your own character and see exactly where you diverge — without one overwriting the other.
 
 Built with Kotlin Multiplatform and Compose Multiplatform, targeting desktop, mobile, and web.
 
@@ -10,44 +10,29 @@ Built with Kotlin Multiplatform and Compose Multiplatform, targeting desktop, mo
 
 ## Features (Planned)
 
-### v1 — Trees
-- Passive tree planner (includes mastery trees)
-- Skill specialization tree planner
+### v1 — Passive Tree Diff
+- Passive tree viewer
+- PoB build import
+- Character import via PoE API
+- Diff view — overlay a guide's passive tree against your character and highlight the delta
 
-### v2 — Character & Tracking
-- Character import — sync your character from Last Epoch (via API where available, otherwise manual entry)
-- Quest passive tracker — track which quest rewards you've claimed
-- Item import — pull in your character's current gear
-- Idol import — pull in your character's current idols
-- Custom item creation — manually define items for theorycrafting
+### v2 — Skills & Gear
+- Skill gem planner
+- Item planner with basic theorycrafting
+- PoB guide vs. character diff extended to skills and gear
 
-### v3 — Itemization
-- Item planner — full slot management and gear theorycrafting
-- Idol planner
-- Basic crafting simulation
-
-### v4 — Guides
-- Guide import — import a build guide and overlay it on your own character
-- Guide vs. character diff view — see exactly where your character diverges from a guide without one overwriting the other
-
-### v5 — Everything Else
-- Blessings (Monolith)
-- Faction reputation and rewards
-- Damage and stat calculations (scope TBD — depends on community data availability; see Last Epoch Discord)
+### v3 — Calculations
+- Damage and stat calculations (incremental, based on community data and PoB parity)
 
 ---
 
 ## Game Data
 
-Tree, skill, and game calculation data is versioned alongside the app, allowing planning against specific patch versions. Approach inspired by epoch-tools and Path of Building.
-
-Data sourcing is TBD — likely extracted game files or a community-maintained dataset.
+Passive tree and skill data is sourced from the official PoE API and community datasets, versioned alongside the app to support planning against specific league versions.
 
 ---
 
 ## Architecture
-
-The project is split into modules:
 
 - **`core`** — platform-agnostic game logic and data models, shared across all targets
 - **`composeApp`** — desktop and mobile UI built with Compose Multiplatform
@@ -100,4 +85,4 @@ Mozilla Public License 2.0 — see [LICENSE](./LICENSE).
 
 Contributions are welcome. Open an issue before starting significant work so we can align on approach.
 
-This project is not affiliated with Eleventh Hour Games.
+This project is not affiliated with Grinding Gear Games.

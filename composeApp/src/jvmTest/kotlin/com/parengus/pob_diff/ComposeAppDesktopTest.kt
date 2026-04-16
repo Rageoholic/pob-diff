@@ -1,4 +1,4 @@
-package com.parengus.epoch_path_builder
+package com.parengus.pob_diff
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

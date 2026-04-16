@@ -1,4 +1,4 @@
-package com.parengus.epoch_path_builder
+package com.parengus.pob_diff
 
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
@@ -9,7 +9,7 @@ fun main() = application {
     println("ComposeApp started: core says $c")
     Window(
         onCloseRequest = ::exitApplication,
-        title = "Epoch Path Builder",
+        title = "PoBDiff",
     ) {
         App()
     }
