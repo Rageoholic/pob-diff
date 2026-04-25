@@ -50,6 +50,7 @@ object PoE1Game : Game {
 
         LaunchedEffect(Unit) {
             state = try {
+                appStorage().recover()
                 val versions = fetchVersions()
                 val latest = versions.first()
                 PoE1AppState.Loaded(latest, versions, loadTree(latest))
